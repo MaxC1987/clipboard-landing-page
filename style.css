@@ -1,0 +1,413 @@
+@import url(https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap);
+
+:root {
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+body {
+  width: 100vw;
+  font-family: Bai Jamjuree, sans-serif;
+  font-size: 18px;
+}
+
+/* FONT STYLE */
+
+P {
+  font-weight: 600;
+}
+
+.dark {
+  color: var(--Dark-Grayish-Blue);
+}
+
+.light {
+  color: var(--Grayish-Blue);
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  height: 600px;
+  padding: 40px 0;
+  background-image: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-logo {
+  width: 100px;
+}
+
+.header-text {
+  width: 45%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 2.6rem;
+}
+
+.buttons {
+  width: 420px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 200px;
+  height: 45px;
+  border: none;
+  border-radius: 25px;
+  font-family: Bai Jamjuree, sans-serif;
+  font-weight: 600;
+  color: white;
+}
+
+.ios {
+  background-color: var(--Strong-Cyan);
+  border-bottom: 3px solid hsl(171, 66%, 30%);
+  box-shadow: 0 1px 5px var(--Strong-Cyan);
+}
+
+.mac {
+  background-color: var(--Light-Blue);
+  border-bottom: 3px solid hsl(233, 45%, 43%);
+  box-shadow: 0 1px 5px var(--Light-Blue);
+}
+
+/* MAIN */
+
+main {
+  width: 100%;
+}
+
+.main-text {
+  width: 50%;
+  height: 150px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* SECTION 1 */
+
+h2 {
+  width: 100%;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.section1 {
+  width: 100%;
+  height: 840px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template: 240px 600px / 50% 50%;
+  justify-items: center;
+}
+
+.top {
+  grid-area: 1 / 1 / 2 / 3;
+  width: 50%;
+}
+
+.main-img1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.main-aside {
+  width: 54%;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.aside-div {
+  margin-top: 65px;
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+/* SECTION 2 */
+
+.section2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-img2 {
+  margin-top: 70px;
+}
+
+/* SECTION 3 */
+
+.section3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.three-box-container {
+  width: 90%;
+  height: 280px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 30%;
+  height: 280px;
+  text-align: center;
+  display: grid;
+  grid-template: 140px 60px 80px / 1fr;
+  justify-items: center;
+}
+
+.box-img {
+  margin-top: 60px;
+}
+
+.sponsors {
+  width: 92%;
+  height: 200px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sponsor {
+  width: 16%;
+  height: 200px;
+  object-fit: scale-down;
+}
+
+/* SECTION 4 */
+
+.section4 {
+  margin: 20px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*  FOOTER */
+
+footer {
+  width: 100%;
+  height: 160px;
+  padding: 40px 140px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  background-color: hsla(202, 11%, 66%, 0.2);
+}
+
+.footer-logo {
+  width: 80px;
+  height: 80px;
+}
+
+.footer-p {
+  width: 140px;
+  height: 39px;
+}
+
+.footer-p:last-of-type {
+  height: 78px;
+}
+
+.social {
+  width: 150px;
+  margin: auto 0 auto 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ion {
+  font-size: 2rem;
+}
+
+/* ACTIVE STATES */
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+a {
+  color: var(--Dark-Grayish-Blue);
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--Dark-Grayish-Blue);
+}
+
+a:hover {
+  color: var(--Strong-Cyan);
+}
+
+@media (max-width: 1023px) {
+  .header-text, .buttons, .section1, .section2, .section3, .section4 {
+    width: 85%;
+  }
+  /* HEADER */
+  header {
+    height: 700px;
+    padding: 60px 0;
+    background-image: url(images/bg-header-mobile.png);
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 25px;
+  }
+  .buttons {
+    height: 120px;
+    flex-direction: column;
+  }
+  button {
+    width: 100%;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  /* MAIN */
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-text {
+    width: 100%;
+    height: 250px;
+  }
+  .main-img1, .main-img2 {
+    width: 100%;
+  }
+  /* SECTION 1 */
+  .section1 {
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-img1 {
+    margin-top: 60px;
+  }
+  .main-aside {
+    width: 100%;
+  }
+  .aside-div {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+  /* SECTION 2 */
+  .main-img2 {
+    margin-top: 0;
+  }
+  /* SECTION 3 */
+  .section3 {
+    height: 1800px;
+    margin-top: 75px;
+  }
+  .three-box-container {
+    height: 50%;
+    margin: 0;
+    flex-direction: column;
+  }
+  .box {
+    width: 100%;
+  }
+  .sponsors {
+    width: 100%;
+    height: 30%;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sponsor {
+    width: 70%;
+  }
+  /* SECTION 4 */
+  .section4 {
+    margin: 80px 0 140px;
+  }
+  /* FOOTER */
+  footer {
+    height: 600px;
+    padding: 20px 0;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: center;
+  }
+  .footer-logo, .footer-p, .social {
+    margin: 0 auto;
+  }
+  .footer-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  .footer-p {
+    font-size: 1.2rem;
+  }
+  .footer-p:last-of-type {
+    height: 39px;
+  }
+  .social {
+    margin: 0;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-text {
+    height: 150px;
+  }
+  .section3 {
+    margin-top: 50px;
+  }
+  .sponsors {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .main-text {
+    width: 60%;
+  }
+  .main-aside {
+    margin-left: 100px;
+  }
+  footer {
+    padding: 40px 60px;
+  }
+  .footer-logo {
+    width: 65px;
+    height: 65px;
+  }
+}
